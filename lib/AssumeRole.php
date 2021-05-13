@@ -13,15 +13,17 @@ class AssumeRole
     private $secretAccessKey;
     /** @var string */
     private $sessionToken;
-
+    /** @var string */
+    private $expiration;
     /**
      * AssumeRole constructor.
      */
-    public function __construct(string $accessKeyId, string $secretAccessKey, string $sessionToken)
+    public function __construct(string $accessKeyId, string $secretAccessKey, string $sessionToken, string $expiration)
     {
         $this->accessKeyId = $accessKeyId;
         $this->secretAccessKey = $secretAccessKey;
         $this->sessionToken = $sessionToken;
+        $this->expiration = $expiration;
     }
 
     public function getAccessKeyId(): string
@@ -116,7 +118,8 @@ class AssumeRole
             return new AssumeRole(
                 $credentials['AccessKeyId'],
                 $credentials['SecretAccessKey'],
-                $credentials['SessionToken']
+                $credentials['SessionToken'],
+                $credentials['Expiration']
             );
 
 //            return $tokens;
