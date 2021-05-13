@@ -103,7 +103,7 @@ class SellingPartnerOAuth
         $body = $response->getBody()->getContents();
         $bodyAsJson = json_decode($body, true);
         if (isset($bodyAsJson['error_description'])) {
-            throw new SellingPartnerOAuthException($bodyAsJson['error_description'], $bodyAsJson['error']);
+            throw new SellingPartnerOAuthException($bodyAsJson['error_description'] . ' / ' . $bodyAsJson['error']);
         }
 
         return $bodyAsJson['refresh_token'];
