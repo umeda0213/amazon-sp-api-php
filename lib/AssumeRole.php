@@ -41,6 +41,11 @@ class AssumeRole
         return $this->sessionToken;
     }
 
+    public function getExpiration(): string
+    {
+        return $this->expiration;
+    }
+
     /**
      * @throws \GuzzleHttp\Exception\GuzzleException
      *
