@@ -37,7 +37,7 @@ class SellingPartnerOAuth
         $body = $response->getBody()->getContents();
         $bodyAsJson = json_decode($body, true);
 
-        return $bodyAsJson['access_token'];
+        return $bodyAsJson;
     }
 
     /**
@@ -69,7 +69,7 @@ class SellingPartnerOAuth
         $body = $response->getBody()->getContents();
         $bodyAsJson = json_decode($body, true);
 
-        return $bodyAsJson['access_token'];
+        return $bodyAsJson;
     }
 
     /**
@@ -106,6 +106,6 @@ class SellingPartnerOAuth
             throw new SellingPartnerOAuthException($bodyAsJson['error_description'] . ' / ' . $bodyAsJson['error']);
         }
 
-        return $bodyAsJson['refresh_token'];
+        return $bodyAsJson;
     }
 }
