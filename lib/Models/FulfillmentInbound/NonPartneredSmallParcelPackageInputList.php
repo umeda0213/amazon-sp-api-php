@@ -167,7 +167,7 @@ class NonPartneredSmallParcelPackageInputList implements ModelInterface, ArrayAc
      */
     public function listInvalidProperties()
     {
-        $invalidProperties = parent::listInvalidProperties();
+        $invalidProperties = [];//parent::listInvalidProperties();
 
         return $invalidProperties;
     }

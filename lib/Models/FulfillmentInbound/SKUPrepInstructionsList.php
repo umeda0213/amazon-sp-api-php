@@ -167,7 +167,7 @@ class SKUPrepInstructionsList implements ModelInterface, ArrayAccess, IterableTy
      */
     public function listInvalidProperties()
     {
-        $invalidProperties = parent::listInvalidProperties();
+        $invalidProperties = [];//parent::listInvalidProperties();
 
         return $invalidProperties;
     }
