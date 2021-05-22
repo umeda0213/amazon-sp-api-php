@@ -255,6 +255,6 @@ class NumberOfOfferListingsList implements ModelInterface, ArrayAccess, Iterable
 
     public function getSubClass()
     {
-        return NumberOfOffers::class;
+        return OfferListingCountType::class;
     }
 }
