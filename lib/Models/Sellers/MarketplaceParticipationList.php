@@ -167,7 +167,7 @@ class MarketplaceParticipationList implements ModelInterface, ArrayAccess, Itera
      */
     public function listInvalidProperties()
     {
-        $invalidProperties = parent::listInvalidProperties();
+        $invalidProperties = [];// parent::listInvalidProperties();
 
         return $invalidProperties;
     }
